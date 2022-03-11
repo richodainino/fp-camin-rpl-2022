@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "nodemon app.js"
   },
   "repository": {
@@ -19,6 +19,7 @@
   "homepage": "https://github.com/richodainino/fp-camin-rpl-2022#readme",
   "description": "",
   "devDependencies": {
+    "jest": "^27.5.1",
     "nodemon": "^2.0.15"
   },
   "dependencies": {
