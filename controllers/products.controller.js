@@ -3,14 +3,6 @@ const ProductService = require('../services/products.service');
 const createProduct = async (req, res) => {
     try {
         const productServiceInstance = new ProductService();
-        const product = await productServiceInstance.getByName(req.body.name);
-        
-        if (product) {
-            return res.status(400).json({
-                msg: "Product already exists",
-            });
-        }
-        
         const newProduct = await productServiceInstance.create(req.body);
         res.status(201).json({
             status: "success",
