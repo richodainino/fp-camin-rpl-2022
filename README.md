@@ -6,7 +6,7 @@ With the Web server and the MongoDB started and running, perform the following r
 
 **Example request:**
 
-- **GET** [/products](/products)
+- **GET** /products
 - **Accept:** application/json
 - **Content-Type:** application/json
 
@@ -63,7 +63,7 @@ With the Web server and the MongoDB started and running, perform the following r
 
 **Example request:**
 
-- **GET** [/products/{id}](/products/{id})
+- **GET** /products/{id}
 - **Accept:** application/json
 - **Content-Type:** application/json
 
@@ -81,6 +81,78 @@ With the Web server and the MongoDB started and running, perform the following r
             "__v": 0
         }
     }
+}
+```
+
+- **200** OK
+
+### Create product
+**Example request:**
+
+- **POST** /products
+- **Accept:** application/json
+- **Content-Type:** application/json
+
+**Example response:**
+
+```json
+{
+    "status": "success",
+    "data": {
+        "newProduct": {
+            "name": "Zuper Box",
+            "description": "Nasi + Ayam + Zuper Krunch + Minuman",
+            "price": "Rp. 55.999",
+            "image": "https://i.ibb.co/2jSzdvN/catalog03.png",
+            "_id": "622b815d1136722443fff0f3",
+            "__v": 0
+        }
+    }
+}
+```
+
+- **200** OK
+
+
+### Edit product detail
+**Example request:**
+
+- **PATCH** /products
+- **Accept:** application/json
+- **Content-Type:** application/json
+
+**Example response:**
+
+```json
+{
+    "status": "success",
+    "data": {
+        "product": {
+            "_id": "622b815d1136722443fff0f3",
+            "name": "Zuper Box",
+            "description": "Nasi + Ayam + Zuper Krunch + Minuman",
+            "price": "Rp. 1.999",
+            "image": "https://i.ibb.co/2jSzdvN/catalog03.png",
+            "__v": 0
+        }
+    }
+}
+```
+
+- **200** OK
+
+### Delete product
+**Example request:**
+
+- **DELETE** /products
+- **Accept:** application/json
+- **Content-Type:** application/json
+
+**Example response:**
+```json
+{
+    "status": "success",
+    "data": null
 }
 ```
 
