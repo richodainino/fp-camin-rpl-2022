@@ -1,12 +1,10 @@
 const express = require('express');
 const app = express();
-require('dotenv').config();
 
 const connectDB = require('./db/connect');
 const products = require('./routes/products.route');
 const orders = require('./routes/orders.route');
-
-const port = 5000;
+const config = require('./config');
 
 // Untuk header application/json
 app.use(express.json());
@@ -22,8 +20,8 @@ app.get('/', (req, res) => {
 
 const start = async () => {
   try {
-    await connectDB(process.env.MONGO_URI);
-    app.listen(port, console.log(`Server is listening on localhost:${port}`));
+    await connectDB(config.dbUri);
+    app.listen(config.port, console.log(`Server is listening on localhost:${config.port}`));
   } catch (error) {
     console.log(error);
   }
