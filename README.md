@@ -1,5 +1,10 @@
-## How to use
+# Restaurant CRUD API
+Ini merupakan API restoran yang dapat digunakan untuk mengelola produk-produk pada menu dan orderan yang diterima oleh sebuah restoran.
 
+## Read here for the full Documentation of this API
+https://documenter.getpostman.com/view/13493249/UVsHUnqB
+
+## How to use
 With the Web server and the MongoDB started and running, perform the following requests to consume the API:
 
 ### List all products
